@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package example_flutter_grpc_security;
+
+service GrpcAuthentication {
+  rpc Login(GrpcLoginRequest) returns (GrpcLoginRequestReply);
+}
+
+message GrpcLoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message GrpcLoginRequestReply {
+  bool success = 1;
+  string token = 2;
+}

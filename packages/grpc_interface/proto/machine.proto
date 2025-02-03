@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package example_flutter_grpc_security;
+
+service GrpcMachine {
+  rpc StartMachine(GrpcStartMachineRequest) returns (GrpcStartMachineReply);
+}
+
+message GrpcStartMachineRequest {}
+
+message GrpcStartMachineReply {
+  bool success = 1;
+}
+
